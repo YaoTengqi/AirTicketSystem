@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Home</title>
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Govihar Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="css/JFFormStyle-1.css" />
+    <link href="css/航班查询.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/订单管理.css" type="text/css" rel="stylesheet" media="all">
+    <!-- js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <!-- //js -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true // 100% fit in a container
+            });
+        });
+    </script>
+    <!--pop-up-->
+    <script src="js/menu_jquery.js"></script>
+    <!--//pop-up-->
+
+</head>
+<!--header-->
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-grids">
+                <div class="logo">
+                    <h1><a href="success.html"><span>机票</span>预定系统</a></h1>
+                </div>
+                <!--navbar-header-->
+                <div class="header-dropdown">
+                    <div class="emergency-grid">
+                        <ul>
+                            <li style="font-size: 20px;color: black;">您好&nbsp;&nbsp;</li>
+                            <li id="login_state" style="font-size: 20px;color: black;">您未登录&nbsp;&nbsp;</li>
+                            <li><img src="images/phone.ico" style="width: 20px;" /></li>
+                            <li class="call" style="font-size: 20px;">+160160</li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="nav-top">
+                <div class="top-nav">
+                    <span class="menu"><img src="images/menu.png" alt="" /></span>
+                    <ul class="nav1">
+                        <li class="active"><a href="success.html">航班</a></li>
+                        <li class="active"><a href="在线选座.html">在线选座</a></li>
+                        <li class="active"><a href="订单管理.html">订单管理</a></li>
+                        <li class="active" id="login"><a href="index.html">注册/登录</a></li>
+                    </ul>
+                    <div class="clearfix"> </div>
+                    <!-- script-for-menu -->
+                    <script>
+                        $("span.menu").click(function() {
+                            $("ul.nav1").slideToggle(300, function() {
+                                // Animation complete.
+                            });
+                        });
+                    </script>
+                    <!-- /script-for-menu -->
+                </div>
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- banner -->
+    <div class="banner">
+        <div>
+            <h3 style="text-align: center;color:aliceblue;">航班信息</h3>
+            <table class="table table-hover text-center">
+                <tr>
+                    <th style="width:20%"> </th>
+                    <th style="width:25%"></th>
+                    <th style="width:25%"></th>
+                    <th style="width:15%">航班号</th>
+                    <th style="width:15%">舱位</th>
+                </tr>
+                <tr>
+
+                    <th style="width:20%">行程（单程）</th>
+                    <th style="width:25%">起飞时间/机场</th>
+                    <th style="width:25%">到达时间/机场</th>
+                    <th style="width:15%">航班号</th>
+                    <th style="width:15%">舱位</th>
+                </tr>
+                <tr>
+                    <tr>
+                        <td class="font16"><strong class="blue-0093dd">三亚</strong> <span class="font12">至</span> <strong class="blue-0093dd">哈尔滨</strong></td>
+                        <td>
+                            <p>2015-12-20 <span>11:45 </span>凤凰国际机场</p>
+                        </td>
+                        <td>
+                            <p>2015-12-20 <span>14:25 </span>太平国际机场</p>
+                        </td>
+                        <td>（国航）HU7360</td>
+                        <td>经济舱</td>
+                    </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+        <div>
+            <h3 style="color: aliceblue;text-align: center;">订单信息</h3>
+            <table class="table table-hover text-center">
+
+                <tr>
+                    <th>下单时间</th>
+                    <th>订单编号</th>
+                    <th>订单状态</th>
+                    <th class=" bg-gray-f5 text-right">结算总价</th>
+                </tr>
+                <tr>
+                    <td>16-01-15 09:19</td>
+                    <td>1601151023024030101001106</td>
+                    <td>已出票</td>
+                    <td align="text-center" style="color:#ff0253; font-size:14px; font-weight:bold;">1234.00</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+        <div>
+            <h3 style="text-align: center;color: aliceblue;">乘客信息</h3>
+            <table class="table table-hover text-center">
+                <tr class=" bg-gray-f5">
+                    <th>乘客姓名</th>
+                    <th>证件类型</th>
+                    <th>证件号码</th>
+                    <th>手机号码</th>
+                    <th>票号</th>
+                    <th>票面价</th>
+                    <th>机建燃油</th>
+                    <th class="text-right">结算价</th>
+                </tr>
+                <tr class="">
+                    <td>吴光团</td>
+                    <td>身份证</td>
+                    <td>350425197011110557</td>
+                    <td>18381668542</td>
+                    <td>0123456</td>
+                    <td>850</td>
+                    <td>50/0</td>
+                    <td align="text-center" style="color:#ff0253; font-size:14px; font-weight:bold;">280.00</td>
+                </tr>
+                <tr class="">
+                    <td>吴光团（儿）</td>
+                    <td>身份证</td>
+                    <td>350425197011110557</td>
+                    <td>18381668542</td>
+                    <td>0123456</td>
+                    <td>850</td>
+                    <td>50/0</td>
+                    <td align="text-center" style="color:#ff0253; font-size:14px; font-weight:bold;">1200.00</td>
+                </tr>
+                <tr class="">
+                    <td>吴光团（婴）</td>
+                    <td>身份证</td>
+                    <td>350425197011110557</td>
+                    <td>18381668542</td>
+                    <td>0123456</td>
+                    <td>850</td>
+                    <td>50/0</td>
+                    <td align="text-center" style="color:#ff0253; font-size:14px; font-weight:bold;">1250.00</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+
+        <h3 style="text-align: center; color: aliceblue;">支付信息</h3>
+        <table border="0" cellspacing="0" cellpadding="0" class="table  font12  v-align-top bor-bottom-solid-1">
+            <tr class="bg-gray-f5">
+                <th>方式</th>
+                <th>时间</th>
+                <th>交易号</th>
+                <th>付款单位</th>
+                <th>付款账号</th>
+                <th>收款单位</th>
+                <th>收款账号</th>
+                <th>金额</th>
+                <th>收支</th>
+                <th>状态</th>
+                <th>业务类型</th>
+            </tr>
+            <tr class="">
+                <td>预存款</td>
+                <td>16-01-15 11:09</td>
+                <td>TD1601151110166104919</td>
+                <td><abbr title="四川方法数码科技公司">方法数码</abbr></td>
+                <td>111122223333444</td>
+                <td><abbr title="四川龙翔国际旅行社">四川龙翔</abbr></td>
+                <td>111122223333444</td>
+                <td>820.00</td>
+                <td>支</td>
+                <td>已支</td>
+                <td>机票款</td>
+            </tr>
+        </table>
+
+
+
+    </div>
+    </div>
+    <!-- //container -->
+    </div>
+
+    <script type="text/javascript">
+        function del(id) {
+            if (confirm("您确定要预定吗?")) {}
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

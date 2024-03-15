@@ -1,0 +1,162 @@
+.subfiled-style2 h2 {
+    position: absolute;
+    padding: 0 10px;
+    border-bottom: 2px solid #59bc5e;
+    color: #3C3C3C;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0px auto;
+}
+
+.online-flight p {
+
+    text-indent: 2em;
+    line-height: 22px;
+    color: rgb(51, 51, 51);
+    font-family: 微软雅黑;
+    margin: 0px auto;
+    padding: 0px 10px 10px;
+    border-bottom: 1px dashed rgb(204, 204, 204);
+}
+
+.online-flight ul li {
+    float: left;
+    width: 195px;
+    height: 40px;
+    line-height: 20px;
+    font-size: 14px;
+    font-family: 微软雅黑;
+    margin: 0px auto;
+
+}
+.online-flight ul li a {
+    display: block;
+    color: rgb(59, 142, 211);
+
+    font-family: 微软雅黑;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0px auto;
+}
+.online-flight ul li span {
+    color: #777;
+    font-size: 12px;
+    padding-left: 20px;
+    margin: 0px auto;
+}
+
+
+.subfiled-style2 h2 {
+    position: absolute;
+    padding: 0 10px;
+    border-bottom: 2px solid #59bc5e;
+    color: #3C3C3C;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0px auto;
+}
+.subfiled-style2 {
+    position: relative;
+    padding: 0;
+    height: 26px;
+    border-bottom: 2px solid #e5e5e5;
+    line-height: 26px;
+
+}
+.ol-checkin {
+    padding: 0 0 8px 0;
+    margin: 0px auto;
+}
+.subfiled-style2 {
+    position: relative;
+    padding: 0;
+    height: 26px;
+    margin: 0px auto;
+    border-bottom: 2px solid #e5e5e5;
+    line-height: 26px;
+
+}
+.ol-checkin {
+    padding: 0 0 8px 0;
+    margin: 0px auto;
+    background-color:#b1b3e8 ;
+}
+.checkin-img img {
+    display: block;
+
+    background-color: #b1b3e8;
+}
+.checkin-img{
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    background-color: #b1b3e8;
+}
+.online-flight {
+    padding: 10px;
+    margin: 10px auto;
+    background-color:#b1b3e8 ;
+}
+
+
+.subfiled-style2 {
+    position: relative;
+    padding: 0;
+    height: 26px;
+    border-bottom: 2px solid #e5e5e5;
+    line-height: 26px;
+    background-color:#b1b3e8 ;
+    margin: 10px auto;
+}
+
+.ol-checkin{
+    margin: 0px auto;
+}
+.ol-checkin ol li h6 {
+    font-weight: bold;
+
+}
+
+
+.ol-checkin ol li {
+    list-style: decimal;
+    line-height: 20px;
+    color: #333;
+    margin: 0px 0 0 25px;
+}
+
+h6 {
+    display: block;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+ol {
+    margin:0 auto;
+}
+
+
+
+.subfiled-style2 h2 {
+    position: relative;
+    padding: 0 10px;
+    border-bottom: 2px solid #59bc5e;
+    color: #3C3C3C;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.zq{
+    background-color:#b1b3e8 ;
+}

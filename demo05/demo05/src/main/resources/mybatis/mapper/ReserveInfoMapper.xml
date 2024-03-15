@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.demo05.mapper.ReserveInfoMapper">
+    <!--    public void insertReserveInfo( SeatSelect seatSelect);-->
+    <insert id="insertReserveInfo" parameterType="com.atguigu.demo05.Bean.SeatSelect">
+        insert into seat_select
+        values (#{order_id}, #{select_date}, #{customer_id}, #{agency_id}, #{airp_id}, #{seat_id}, #{seat_level},
+                #{payment}, #{payment_real}, #{pay_state})
+    </insert>
+</mapper>

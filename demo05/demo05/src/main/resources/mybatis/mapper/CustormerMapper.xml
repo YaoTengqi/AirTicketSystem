@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.demo05.mapper.CustormerMapper">
+    <!--    public Customer getCust(String Id);-->
+    <select id="getCust" resultType="com.atguigu.demo05.Bean.Customer">
+        select *
+        from customer_table
+        where cust_id = #{id}
+    </select>
+
+    <!--通过唯一验证码查找用户-->
+    <select id="getCustByCode" resultType="com.atguigu.demo05.Bean.Customer">
+        select *
+        from customer_table
+        where active_code = #{active_code}
+    </select>
+
+    <insert id="addCust" parameterType="com.atguigu.demo05.Bean.Customer">
+        insert into customer_table(cust_id, cust_email, cust_passwd, active_code)
+        values (#{id}, #{email}, #{passwd}, #{active_code})
+    </insert>
+
+    <update id="updateState" parameterType="com.atguigu.demo05.Bean.Customer">
+        update air_ticket.customer_table
+        set active_state=1
+        where air_ticket.customer_table.cust_id = #{id}
+    </update>
+</mapper>

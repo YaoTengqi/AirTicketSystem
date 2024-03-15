@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Govihar Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="css/JFFormStyle-1.css" />
+    <link href="css/航班查询.css" type="text/css" rel="stylesheet" media="all">
+    <!-- js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <!-- //js -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+        });
+    </script>
+    <script>
+        window.onload =function(){
+    form=document.getElementById("line1");
+    form1=document.getElementById("line2");
+    form2=document.getElementById("line3");
+    form3=document.getElementById("line4");
+    form4=document.getElementById("line5");
+
+    air_id=document.getElementById("air_id");
+    type=document.getElementById("type");
+    air_id_submit=document.getElementById("air_id_submit");
+    type_submit=document.getElementById("type_submit");
+    var a=air_id.innerHTML;
+    var b=type.innerHTML;
+    air_id_submit.value=a;
+    type_submit.value=b;
+
+    tijiao=document.getElementById("tijiao");
+    tijiao.onclick=function(){
+        form.action='实名认证.html' ;
+        form.submit();
+
+} 
+
+    }
+</script>
+    <!--pop-up-->
+    <script src="js/menu_jquery.js"></script>
+    <!--//pop-up-->
+</head>
+<!--header-->
+<body>
+<!--header-->
+<div class="header">
+    <div class="container">
+        <div class="header-grids">
+            <div class="logo">
+                <h1><a  href="success.html"><span>Go</span>hebuter</a></h1>
+            </div>
+            <!--navbar-header-->
+            <div class="header-dropdown">
+                <div class="emergency-grid">
+                    <ul>
+                        <li style="font-size: 20px;color: black;">您好&nbsp;&nbsp;</li>
+                        <li id="login_state" style="font-size: 20px;color: black;">您未登录&nbsp;&nbsp;</li>
+                        <li><img src="images/phone.ico" style="width: 20px;"/></li>
+                        <li class="call" style="font-size: 20px;">+160160</li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="nav-top">
+            <div class="top-nav">
+                <span class="menu"><img src="images/menu.png" alt="" /></span>
+                <ul class="nav1">
+                    <li class="active"><a href="success.html">航班</a></li>
+                    <li class="active"><a href="在线选座.html">在线选座</a></li>
+                    <li class="active"><a href="订单管理.html">订单管理</a></li>
+                    <li class="active" id="login"><a href="index.html">注册/登录</a></li>
+                </ul>
+                <div class="clearfix"> </div>
+                <!-- script-for-menu -->
+                <script>
+                    $( "span.menu" ).click(function() {
+                        $( "ul.nav1" ).slideToggle( 300, function() {
+                            // Animation complete.
+                        });
+                    });
+
+                </script>
+                <!-- /script-for-menu -->
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--//header-->
+
+
+<!-- banner -->
+<div class="banner">
+    <!-- container -->
+    <div class="container">
+        <div class="sap_tabs">
+<!--            上面的框选时间航空公司-->
+                <div class="container" style=" position:relative;">
+                    <form class="form-inline" style=" position:relative;">
+                        <div class="form-group">
+                            <select name="" class="form-control">
+                                <option selected>单程</option>
+                                <option>往返</option>
+                            </select>
+                        </div>
+                        <div class="form-group mar-left-10">
+                            <label for="" style="color: #eadbdf">出发城市</label>
+                            <input type="text" class="form-control" style="width:85px;" id="" value="天津" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for=""> — <a href="#" class="huan">换</a> —</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="" style="color: #eadbdf">到达城市</label>
+                            <input type="text" class="form-control" style="width:85px;" id="" value="上海" placeholder="">
+                        </div>
+                        <div class="form-group mar-left-10">
+                            <label for="" style="color: #eadbdf">出发日期</label>
+                            <input type="date" class="form-control " id="" style="width:160px;" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Select date';}">
+<                     </div>
+                        <div class="form-group mar-left-10">
+                            <label for="" style="color: #eadbdf">返回日期</label>
+                           <input type="date" class="form-control " id="" style="width:160px;" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Select date';}">
+                        </div>
+                        <div class="form-group mar-left-10">
+                            <select id="dropAirlines"  class="form-control" style=" width:120px;">
+                                <option value="">全部航司</option>
+                                <option value="3U">3U-川航</option>
+                                <option value="8C">8C-东星</option>
+                                <option value="8L">8L-祥鹏</option>
+                                <option value="9C">9C-春秋</option>
+                                <option value="BK">BK-奥凯</option>
+                                <option value="CA">CA-国航</option>
+                                <option value="CN">CN-新华</option>
+                                <option value="CZ">CZ-南航</option>
+                                <option value="DR">DR-瑞丽航空</option>
+                                <option value="DZ">DZ-东海</option>
+                                <option value="EU">EU-成都(鹰联)</option>
+                                <option value="FM">FM-上航</option>
+                                <option value="FU">FU-福州航空</option>
+                                <option value="G5">G5-华夏</option>
+                                <option value="GJ">GJ-长龙航空</option>
+                                <option value="GS">GS-天津</option>
+                                <option value="GX">GX-广西航空</option>
+                                <option value="GY">GY-多彩贵州航空</option>
+                                <option value="HO">HO-吉祥</option>
+                                <option value="HU">HU-海航</option>
+                                <option value="JD">JD-首都(金鹿)</option>
+                                <option value="JR">JR-幸福</option>
+                                <option value="KN">KN-联航</option>
+                                <option value="KY">KY-昆航</option>
+                                <option value="MF">MF-厦航</option>
+                                <option value="MU">MU-东航</option>
+                                <option value="NS">NS-河北</option>
+                                <option value="PN">PN-西部</option>
+                                <option value="QW">QW-青岛</option>
+                                <option value="SC">SC-山东</option>
+                                <option value="TV">TV-西藏</option>
+                                <option value="UQ">UQ-乌鲁木齐航空</option>
+                                <option value="VD">VD-鲲鹏</option>
+                                <option value="Y8">Y8-扬子江快运航空</option>
+                                <option value="YI">YI-英安</option>
+                                <option value="ZH">ZH-深航</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-warning mar-left-10" style="background-color: #4caf50">搜索</button>
+                    </form>
+                </div>
+<!--            上面的框框结束-->
+        </div>
+<!--黑色框部分结束-->
+
+            <div class="qc5">
+                <!-- 日期开始 -->
+                <div class="nav_menu w">
+                    <div class="menu_item">
+                            <div class="home">星期一</div>
+                            <div class="web_home" ><a href="" class="xingqi">Monday</a></div>
+                    </div>
+                    <div class="menu_item">
+                            <div class="home" >星期二</div>
+                            <div class="web_home"><a href="" class="xingqi">Tuesday</a></div>
+                    </div>
+                    <div class="menu_item">
+                        <div class="home">星期三</div>
+                        <div class="web_home"><a href="" class="xingqi">Wednesday</a></div>
+                    </div>
+                    <div class="menu_item">
+                        <div class="home">星期四</div>
+                        <div class="web_home"><a href="" class="xingqi">Thursday</a></div>
+                    </div>
+                    <div class="menu_item">
+                        <div class="home">星期五</div>
+                        <div class="web_home"> <a href="" class="xingqi">Friday</a>></div>
+                    </div>
+
+                    <div class="menu_item">
+                        <div class="home">星期六</div>
+                        <div class="web_home" ><a href="" class="xingqi">Saturday</a></div>
+                    </div>
+
+                    <div class="menu_item">
+                        <div class="home">星期日</div>
+                        <div class="web_home"><a href="" class="xingqi">Sunday</a></div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+                <!-- 日期结束 -->
+
+
+    <!-- 列表开始 -->
+    <table class="table table-hover text-center">
+        <tr>
+            <th height="50px">航班编号</th>
+            <th>起飞机场</th>
+            <th>客服电话</th>
+            <th>航空公司</th>
+            <th>起飞时间</th>
+            <th>仓位选择</th>
+            <th>航班价格</th>
+            <th>操作</th>
+        </tr>
+        <form id="line1">
+            <input type="text" name="air_id" style="display: none;" id="air_id_submit">
+            <input type="text" name="type" style="display: none;"id="type_submit" >
+        </form>
+
+        <tr th:each = "flightInfo:${flightInfos}" >
+            <td th:text="${flightInfo.f_id}"id="air_id">G1212312433</td>
+            <td th:text="${flightInfo.port_name}"></td>
+            <td th:text="${flightInfo.aircom_tel}"></td>
+            <td th:text="${flightInfo.aircom_name}"></td>
+            <td th:text="${flightInfo.start_time}"></td>
+            <td id="type">经济舱</td>
+            <td th:text="${flightInfo.cheap}"></td>
+            <td><div class="button-group"> <a class="button border-red" id="tijiao"><span class="icon-trash-o"></span> 预定</a> </div></td>
+        </tr>
+
+        <tr>
+            <td  colspan="8">
+                <div class="pagelist">
+                    <a href="">上一页</a>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">下一页</a>
+                    <a href="">尾页</a> </div></td>
+        </tr>
+    </table>
+
+
+        </div>
+    </div>
+    <!-- //container -->
+</div>
+
+<script type="text/javascript">
+    function del(id){
+        if(confirm("您确定要预定吗?")){
+        }
+    }
+</script>
+
+<!--    妹子插件-->
+<script src="./live2dw/lib/L2Dwidget.min.js"></script>
+<script src="./live2dw/lib/L2Dwidget.0.min.js"></script>
+<script>
+    L2Dwidget.init({
+// 谷歌打开这个，后面是本地文件，只能编译器打开
+        "model": {jsonPath:"https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json","scale": 1 },
+
+// 本地文件，只能编译器打开
+// 　　   "model": {jsonPath:"https://unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json","scale": 1 }, /*sex妹子*/
+// 			"model": {jsonPath:"./live2dw/live2d-widget-model-koharu/assets/koharu.model.json","scale": 1 }, /*小女孩*/
+//       "model": {jsonPath:"./live2dw/live2d-widget-model-tororo/assets/tororo.model.json","scale": 1 },/*小白猫*/
+//       "model": {jsonPath:"./live2dw/live2d-widget-model-wanko/assets/wanko.model.json","scale": 1 },/*小白猫*/
+//       "display": { "position": "right", "width": 200, "height": 400,"hOffset": 0, "vOffset": -20 }, /*小狗*/
+        "mobile": { "show": true, "scale": 1 },
+        "react": { "opacityDefault": 1, "opacityOnHover": 1 } });
+</script>
+<!--    妹子插件end-->
+
+</body>
+</html>

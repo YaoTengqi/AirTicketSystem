@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Govihar Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="css/JFFormStyle-1.css" />
+    <link href="css/航班查询.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/在线选座.css" type="text/css" rel="stylesheet" media="all">
+    <!-- js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+
+    <!-- //js -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true   // 100% fit in a container
+            });
+        });
+    </script>
+    <!--pop-up-->
+    <script src="js/menu_jquery.js"></script>
+    <!--//pop-up-->
+    <link rel="icon" href="images/favicon.ico" type="image/ico">
+
+</head>
+<!--header-->
+<body>
+<!--header-->
+<div class="header">
+    <div class="container">
+        <div class="header-grids">
+            <div class="logo">
+                <h1><a  href="success.html"><span>Go</span>hebuter</a></h1>
+            </div>
+            <!--navbar-header-->
+            <div class="header-dropdown">
+                <div class="emergency-grid">
+                    <ul>
+                        <li style="font-size: 20px;color: black;">您好&nbsp;&nbsp;</li>
+                        <li id="login_state" style="font-size: 20px;color: black;">您未登录&nbsp;&nbsp;</li>
+                        <li><img src="images/phone.ico" style="width: 20px;"/></li>
+                        <li class="call" style="font-size: 20px;">+160160</li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="nav-top">
+            <div class="top-nav">
+                <span class="menu"><img src="images/menu.png" alt="" /></span>
+                <ul class="nav1">
+                    <li class="active"><a href="success.html">航班</a></li>
+                    <li class="active"><a href="在线选座.html">在线选座</a></li>
+                    <li class="active"><a href="订单管理.html">订单管理</a></li>
+                    <li class="active" id="login"><a href="index.html">注册/登录</a></li>
+                </ul>
+                <div class="clearfix"> </div>
+                <!-- script-for-menu -->
+                <script>
+                    $( "span.menu" ).click(function() {
+                        $( "ul.nav1" ).slideToggle( 300, function() {
+                            // Animation complete.
+                        });
+                    });
+
+                </script>
+                <!-- /script-for-menu -->
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+<!--//header-->
+
+
+<!-- banner -->
+<div class="banner">
+    <!-- container -->
+    <div class="container">
+
+        <div class="qc5">
+                    <div class="sap_tabs">
+                        <!--            上面的框选时间航空公司-->
+                        <div class="container" style=" position:relative;">
+                            <form class="form-inline" style=" position:relative;">
+                                <div class="form-group">
+                                    <select name="" class="form-control">
+                                        <option selected>单程</option>
+                                        <option>往返</option>
+                                    </select>
+                                </div>
+                                <div class="form-group mar-left-10">
+                                    <label for="" style="color: #eadbdf">出发城市</label>
+                                    <input type="text" class="form-control" style="width:85px;" id="" value="天津" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> — <a href="#" class="huan">换</a> —</label>
+                                </div>
+                                <div class="form-group">
+                                    <label for="" style="color: #eadbdf">到达城市</label>
+                                    <input type="text" class="form-control" style="width:85px;" id="" value="上海" placeholder="">
+                                </div>
+                                <div class="form-group mar-left-10">
+                                    <label for="" style="color: #eadbdf">出发日期</label>
+                                    <input type="date" class="form-control " id="" style="width:160px;" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Select date';}">
+                                    <                     </div>
+                                <div class="form-group mar-left-10">
+                                    <label for="" style="color: #eadbdf">返回日期</label>
+                                    <input type="date" class="form-control " id="" style="width:160px;" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Select date';}">
+                                </div>
+                                <div class="form-group mar-left-10">
+                                    <select id="dropAirlines"  class="form-control" style=" width:120px;">
+                                        <option value="">全部航司</option>
+                                        <option value="3U">3U-川航</option>
+                                        <option value="8C">8C-东星</option>
+                                        <option value="8L">8L-祥鹏</option>
+                                        <option value="9C">9C-春秋</option>
+                                        <option value="BK">BK-奥凯</option>
+                                        <option value="CA">CA-国航</option>
+                                        <option value="CN">CN-新华</option>
+                                        <option value="CZ">CZ-南航</option>
+                                        <option value="DR">DR-瑞丽航空</option>
+                                        <option value="DZ">DZ-东海</option>
+                                        <option value="EU">EU-成都(鹰联)</option>
+                                        <option value="FM">FM-上航</option>
+                                        <option value="FU">FU-福州航空</option>
+                                        <option value="G5">G5-华夏</option>
+                                        <option value="GJ">GJ-长龙航空</option>
+                                        <option value="GS">GS-天津</option>
+                                        <option value="GX">GX-广西航空</option>
+                                        <option value="GY">GY-多彩贵州航空</option>
+                                        <option value="HO">HO-吉祥</option>
+                                        <option value="HU">HU-海航</option>
+                                        <option value="JD">JD-首都(金鹿)</option>
+                                        <option value="JR">JR-幸福</option>
+                                        <option value="KN">KN-联航</option>
+                                        <option value="KY">KY-昆航</option>
+                                        <option value="MF">MF-厦航</option>
+                                        <option value="MU">MU-东航</option>
+                                        <option value="NS">NS-河北</option>
+                                        <option value="PN">PN-西部</option>
+                                        <option value="QW">QW-青岛</option>
+                                        <option value="SC">SC-山东</option>
+                                        <option value="TV">TV-西藏</option>
+                                        <option value="UQ">UQ-乌鲁木齐航空</option>
+                                        <option value="VD">VD-鲲鹏</option>
+                                        <option value="Y8">Y8-扬子江快运航空</option>
+                                        <option value="YI">YI-英安</option>
+                                        <option value="ZH">ZH-深航</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-warning mar-left-10" style="background-color: #4caf50">搜索</button>
+                            </form>
+                        </div>
+                        <!--            上面的框框结束-->
+                    </div>
+                    <!--黑色框部分结束-->
+
+
+            <!-- 流程开始 -->
+            <div  class="zq" id="saper-container">
+                    <div class="online-flight">
+                        <p>网上办理乘机手续(在线选座)，指的是购买了机票且未办理过变更手续的成人旅客，在航班预计起飞时间前，可以通过网络在线选择座位、打印登机牌、办理登机牌手续。您乘飞机时喜欢坐前排？后排？靠窗？还是靠走道？通过网上值机，您可以足不出户，提前选好座位免去在机场值机柜台长时间排队的烦恼。</p>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="">登录国航选座</a>
+                                <span>起飞前36小时开始办理</span>
+                            </li>
+                            <li>
+                                <a href="">登录南航选座</a>
+                                <span>起飞前一天14:00后开始办理</span>
+                            </li>
+                            <li>
+                                <a href="">登录海航选座</a>
+                                <span>起飞前一天13:00后开始办理</span>
+                            </li>
+                            <li>
+                                <a href="">登录深航选座</a>
+                                <span>起飞前36小时开始办理</span>
+                            </li>
+                            <li>
+                                <a href=""><img src="images/icon/flightslogo.png" alt="" />登录川航选座</a>
+                                <span>起飞前36小时开始办理</span>
+                            </li>
+                            <li>
+                                <a href="">登录厦航选座</a>
+                                <span>起飞前一天13:00后开始办理</span>
+                            </li>
+                            <li>
+                                <a href="">登录天津航空选座</a>
+                                <span>起飞前36小时开始办理</span>
+                            </li>
+                            <li>
+                                <a href="">登录重庆航空选座</a>
+                                <span>起飞前一天13:00后开始办理</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="subfiled-style2 clearfix">
+                        <h2>网上值机示意图</h2>
+                    </div>
+
+                    <div class="checkin-img">
+                        <img src="images/checkin.jpg" alt="" />
+                    </div>
+
+                    <div class="subfiled-style2 clearfix">
+                        <h2>网上办理乘机手续</h2>
+                    </div>
+
+                    <div class="ol-checkin">
+                        <ol>
+                            <li>网上办理乘机手续(简称"网上值机")服务,"网上值机"就是购买了电子客票且未办理过变更手续和有确定航班的成人旅客，可以不用亲自到机场值机柜台，就可在航班预计起飞时间前，自行上网,确认航班,选择座位,网上打印登机牌,完成办理登机牌手续。</li>
+                            <li>您乘飞机的时候喜欢坐前排？后排？靠窗？还是靠走道？有了网上值机，从今往后您就可以足不出户，通过家中的联网电脑提前预订座位，免去往日在机场值机柜台长时间排队，以及和值机员交涉安排喜爱座位的烦恼，让您从容、便捷、一步到位地享受从订票到办理登机手续的一条龙尊贵服务。</li>
+                        </ol>
+                    </div>
+                    <div class="subfiled-style2 clearfix">
+                        <h2>网上办理乘机手续(在线选座)常见问题</h2>
+                    </div>
+
+                    <div class="ol-checkin">
+                        <ol>
+                            <li>
+                                <h6>哪些航班可以在网站上办理乘机手续？</h6>
+                                <p>指定机场始发的实际承运的国内航班可以在网站上办理乘机手续。目前开通网上值机的航班有：上海、北京、广州、深圳、重庆、南京桂林、海口、西安、福州、厦门、天津、沈阳、武汉、青岛、成都、哈尔滨、杭州、昆明、温州和三亚。</p>
+                            </li>
+                            <li>
+                                <h6>哪些旅客可以在网站上办理乘机手续？</h6>
+                                <p>持电子客票的旅客可以在相应网站上自行办理乘机手续，不包括儿童及婴儿旅客、中转旅客、伤病旅客、轮椅旅客、重要旅客、革命伤残军人、孕妇、占座行李、担架旅客、无人陪伴老人，特殊餐食申请者。以上需要办理特殊服务的旅客请直接到机场值机柜台办理乘机手续。</p>
+                            </li>
+                            <li>
+                                <h6>联程航班是否可以在网站上一次性办理网上登机手续?</h6>
+                                <p>目前暂时不可以在网上办理中转联程航班。</p>
+                            </li>
+                            <li>
+                                <h6>成功办理网上乘机手续后是否可以直接登机？</h6>
+                                <p>可以，但是旅客需要凭有效身份证件和网上打印的登机牌才能通过机场安检和登机口直接登机(有托运行李的旅客还必须在机场指定值机柜台办理行李托运)。</p>
+                            </li>
+                            <li>
+                                <h6>已经在网站上办理完乘机手续，是否可以取消？</h6>
+                                <p>您可以于航班起飞前2小时自行在网站上取消座位或致电相应的航空公司客服取消。</p>
+                            </li>
+                            <li>
+                                <h6>网上乘机手续系统能否变更已经选择的座位吗？</h6>
+                                <p>已经在网站上办理了乘机手续的旅客，可以再次登录系统，先将原来的座位取消，然后重新选择一个座位并打印登机牌(旅客点击 "取消座位"后，原先办理乘机手续产生的登机牌将在系统中自动作废；同一个航段最多只能办理三次登机牌手续)。</p>
+                            </li>
+                            <li>
+                                <h6>如果没有打印机，能在网站办理乘机手续吗？</h6>
+                                <p>可以，但必须在办理手续后凭有效身份证件到机场值机柜台补打登机牌。</p>
+                            </li>
+                            <li>
+                                <h6>为什么登机牌上的登机口显示"待定"？</h6>
+                                <p>由于办理网上乘机手续的时间较早，登机口还没有分配，请您到达机场后查看机场动态显示屏或咨询工作人员。</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="saper-ft"></div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- //container -->
+</div>
+
+<!-- //banner -->
+
+<!--    妹子插件-->
+<script src="./live2dw/lib/L2Dwidget.min.js"></script>
+<script src="./live2dw/lib/L2Dwidget.0.min.js"></script>
+<script>
+    L2Dwidget.init({
+// 谷歌打开这个，后面是本地文件，只能编译器打开
+        "model": {jsonPath:"https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json","scale": 1 },
+
+// 本地文件，只能编译器打开
+// 　　   "model": {jsonPath:"https://unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json","scale": 1 }, /*sex妹子*/
+// 			"model": {jsonPath:"./live2dw/live2d-widget-model-koharu/assets/koharu.model.json","scale": 1 }, /*小女孩*/
+//       "model": {jsonPath:"./live2dw/live2d-widget-model-tororo/assets/tororo.model.json","scale": 1 },/*小白猫*/
+//       "model": {jsonPath:"./live2dw/live2d-widget-model-wanko/assets/wanko.model.json","scale": 1 },/*小白猫*/
+//       "display": { "position": "right", "width": 200, "height": 400,"hOffset": 0, "vOffset": -20 }, /*小狗*/
+        "mobile": { "show": true, "scale": 1 },
+        "react": { "opacityDefault": 1, "opacityOnHover": 1 } });
+</script>
+<!--    妹子插件end-->
+
+</body>
+</html>

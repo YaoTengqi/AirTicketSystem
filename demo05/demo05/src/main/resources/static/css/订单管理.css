@@ -1,0 +1,30 @@
+.strong{
+    font-weight: 700;
+    
+}
+body{
+    font-size:14px;
+    line-height: 1.42857143;
+}
+.thin{
+    font-weight: 100;
+}
+.shuxing{
+    font-size: 16px;
+    font-weight: 700;
+}
+.textcenter{
+    text-align:center;
+    top:50%;
+    left:50%;
+}
+button{
+    font-size: 10px;
+    background-color:rgb(75, 175, 80);
+    
+}
+.fontsize{
+    font-size: 18px;
+    text-align: left;
+    line-height: 160px;
+}

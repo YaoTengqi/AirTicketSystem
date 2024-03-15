@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.demo05.mapper.FlightInfoMapper">
+    <!--    public ArrayList<FlightInfo> FlightInfoQuery(String startPos, String endPos );-->
+    <select id="FlightInfoQuery" resultType="com.atguigu.demo05.Bean.FlightInfo">
+        SELECT f.f_id           f_id,
+               f.airp_id        airp_id,
+               p.port_name      port_name,
+               c.aircom_tel     aircom_tel,
+               c.aircom_name    aircom_name,
+               f.start_pos      start_pos,
+               f.dest_pos       dest_pos,
+               f.start_time     start_time,
+               f.dest_time      dest_time,
+               f.cust_cnt       cust_cnt,
+               f.economy_remain economy_remain,
+               f.first_remain   first_remain,
+               f.fstate         fstate,
+               f.board_location board_location,
+               f.cheap          cheap,
+               f.expensive      expensive
+        from flight_table f,
+             air_port p,
+             aircompany_table c
+        where start_pos = #{startPos}
+          and dest_pos = #{endPos}
+          and f.port_id = p.port_id
+          and c.aircom_id = f.aircom_id;
+    </select>
+
+</mapper>

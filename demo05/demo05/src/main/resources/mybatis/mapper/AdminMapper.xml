@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.demo05.mapper.AdminMapper">
+
+    <select id="getCustInfo" resultType="com.atguigu.demo05.Bean.AdminView">
+        SELECT seat_select.airp_id,
+               flight_table.start_time,
+               customer_table.cust_name,
+               customer_table.cust_tel,
+               customer_table.cust_bid,
+               seat_select.seat_level,
+               seat_select.seat_id
+        FROM air_ticket.customer_table,
+             air_ticket.flight_table,
+             air_ticket.seat_select
+        WHERE customer_table.cust_id = seat_select.customer_id
+          AND flight_table.f_id = seat_select.airp_id
+          AND seat_select.airp_id = #{airp_id}
+          AND start_time = #{start_time}
+          AND cust_name = #{cust_name}
+          AND aircom_id = #{aircom_id};
+    </select>
+
+    <select id="getAllCustInfo" resultType="com.atguigu.demo05.Bean.AdminView">
+        SELECT seat_select.airp_id,
+               flight_table.start_time,
+               customer_table.cust_name,
+               customer_table.cust_tel,
+               customer_table.cust_bid,
+               seat_select.seat_level,
+               seat_select.seat_id
+        FROM air_ticket.customer_table,
+             air_ticket.flight_table,
+             air_ticket.seat_select
+        WHERE customer_table.cust_id = seat_select.customer_id
+          AND flight_table.f_id = seat_select.airp_id
+    </select>
+
+
+    <update id="changeCustInfo" parameterType="com.atguigu.demo05.Bean.AdminView">
+        update
+            air_ticket.customer_table,
+            air_ticket.flight_table,
+            air_ticket.seat_select
+        set seat_select.airp_id=#{airp_id},
+            flight_table.start_time=#{start_time},
+            customer_table.cust_name=#{cust_name},
+            customer_table.cust_tel=#{cust_tel},
+            customer_table.cust_bid=#{cust_bid},
+            seat_select.seat_level=#{seat_level},
+            seat_select.seat_id=#{seat_id}
+        where customer_table.cust_id = seat_select.customer_id
+          and flight_table.f_id = seat_select.airp_id
+          and customer_table.cust_name = #{cust_name_old};
+    </update>
+
+    <!--    <insert id="deleteCustInfo" parameterType="com.atguigu.demo05.Bean.AdminView">-->
+    <!--        delete-->
+    <!--        from air_ticket.seat_select-->
+    <!--        where air_ticket.seat_select.customer_id = (select cust_id-->
+    <!--                                                    from air_ticket.customer_table-->
+    <!--                                                    where cust_name = #{cust_name})-->
+    <!--    </insert>-->
+
+    <select id="getAllFilghtInfo" resultType="com.atguigu.demo05.Bean.AdminFlight">
+        SELECT flight_table.f_id,
+               flight_table.start_time,
+               flight_table.dest_time,
+               air_port.port_name,
+               flight_table.board_location,
+               flight_table.economy_remain + flight_table.first_remain AS remain,
+               flight_table.fstate
+        FROM air_ticket.customer_table,
+             air_ticket.flight_table,
+             air_ticket.seat_select,
+             air_ticket.aircompany_table,
+             air_port
+        WHERE customer_table.cust_id = seat_select.customer_id
+          AND flight_table.f_id = seat_select.airp_id
+    </select>
+
+
+    <select id="getFlightInfo" resultType="com.atguigu.demo05.Bean.AdminFlight">
+        SELECT flight_table.f_id,
+               flight_table.start_time,
+               flight_table.dest_time,
+               air_port.port_name,
+               flight_table.board_location,
+               flight_table.economy_remain + flight_table.first_remain AS remain,
+               flight_table.fstate
+        FROM air_ticket.customer_table,
+             air_ticket.flight_table,
+             air_ticket.seat_select,
+             air_ticket.aircompany_table,
+             air_port
+        WHERE customer_table.cust_id = seat_select.customer_id
+          AND flight_table.f_id = seat_select.airp_id
+          AND flight_table.f_id = #{airp_id}
+          AND flight_table.start_pos = #{start_pos}
+          AND flight_table.dest_pos = #{dest_pos}
+          AND flight_table.start_time = #{start_time}
+          AND flight_table.aircom_id = #{aircom_id};
+    </select>
+
+
+    <select id="getAircom" resultType="com.atguigu.demo05.Bean.Aircom">
+        select *
+        from air_ticket.aircompany_table
+    </select>
+</mapper>

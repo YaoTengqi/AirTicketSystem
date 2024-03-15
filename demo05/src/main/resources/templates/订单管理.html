@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Home</title>
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="Govihar Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Custom Theme files -->
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
+    <link type="text/css" rel="stylesheet" href="css/JFFormStyle-1.css"/>
+    <link href="css/航班查询.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/订单管理.css" type="text/css" rel="stylesheet" media="all">
+    <!-- js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <!-- //js -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#horizontalTab').easyResponsiveTabs({
+                type: 'default', //Types: default, vertical, accordion
+                width: 'auto', //auto or any width like 600px
+                fit: true // 100% fit in a container
+            });
+        });
+    </script>
+    <!--pop-up-->
+    <script src="js/menu_jquery.js"></script>
+    <!--//pop-up-->
+
+    <!-- fake  begin -->
+    <script>
+        window.onload = function () {
+            show = document.getElementById("show");
+            show1 = document.getElementById("show1");
+            show2 = document.getElementById("show2");
+            show3 = document.getElementById("show3");
+            zt = document.getElementById("zhuangtai");
+
+
+            show4 = document.getElementById("show4");
+            show5 = document.getElementById("show5");
+            show6 = document.getElementById("show6");
+            show7 = document.getElementById("show7");
+            zt1 = document.getElementById("zhuangtai1");
+
+
+            show8 = document.getElementById("show8");
+            show9 = document.getElementById("show9");
+            show10 = document.getElementById("show10");
+            show11 = document.getElementById("show11");
+            zt2 = document.getElementById("zhuangtai2");
+
+            del = function (i) {
+                var con;
+                con = confirm("确认退票"); //在页面上弹出对话框
+
+                if (con == true) {
+                    document.getElementById('mytable').deleteRow(i);
+                }
+            }
+
+            quit = function (i) {
+                var conf;
+                conf = confirm("确认取消订单"); //在页面上弹出对话框
+
+                if (conf == true) {
+                    document.getElementById('mytable').deleteRow(i);
+                }
+            }
+            pay = function () {
+                var confi;
+                confi = confirm("确认支付？"); //在页面上弹出对话框
+                if (confi == true) {
+                    show.style.display = "none";
+                    show1.style.display = "none";
+                    show2.style.display = "block";
+                    show3.style.display = "block";
+                    zt.innerHTML = "已出票";
+
+
+                }
+            }
+
+            pay1 = function () {
+                var confi;
+                confi = confirm("确认支付？"); //在页面上弹出对话框
+                if (confi == true) {
+                    show4.style.display = "none";
+                    show5.style.display = "none";
+                    show6.style.display = "block";
+                    show7.style.display = "block";
+                    zt1.innerHTML = "已出票";
+
+
+                }
+            }
+
+            pay2 = function () {
+                var confi;
+                confi = confirm("确认支付？"); //在页面上弹出对话框
+                if (confi == true) {
+                    show8.style.display = "none";
+                    show9.style.display = "none";
+                    show10.style.display = "block";
+                    show11.style.display = "block";
+                    zt2.innerHTML = "已出票";
+
+
+                }
+            }
+        }
+    </script>
+    <!-- fake end -->
+</head>
+<!--header-->
+
+<body>
+<div class="header">
+    <div class="container">
+        <div class="header-grids">
+            <div class="logo">
+                <h1><a href="success.html"><span>机票</span>预订系统</a></h1>
+            </div>
+            <!--navbar-header-->
+            <div class="header-dropdown">
+                <div class="emergency-grid">
+                    <ul>
+                        <li style="font-size: 20px;color: black;">您好&nbsp;&nbsp;</li>
+                        <li id="login_state" style="font-size: 20px;color: black;">您未登录&nbsp;&nbsp;</li>
+                        <li><img src="images/phone.ico" style="width: 20px;"/></li>
+                        <li class="call" style="font-size: 20px;">+160160</li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="nav-top">
+            <div class="top-nav">
+                <span class="menu"><img src="images/menu.png" alt=""/></span>
+                <ul class="nav1">
+                    <li class="active"><a href="success.html">航班</a></li>
+                    <li class="active"><a href="在线选座.html">在线选座</a></li>
+                    <li class="active"><a href="订单管理.html">订单管理</a></li>
+                    <li class="active" id="login"><a href="index.html">注册/登录</a></li>
+                </ul>
+                <div class="clearfix"></div>
+                <!-- script-for-menu -->
+                <script>
+                    $("span.menu").click(function () {
+                        $("ul.nav1").slideToggle(300, function () {
+                            // Animation complete.
+                        });
+                    });
+                </script>
+                <!-- /script-for-menu -->
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- banner -->
+<div class="banner">
+    <table class="table table-hover text-center" id="mytable">
+
+        <tr class="shuxing">
+            <th>创建时间</th>
+            <th>乘机人</th>
+            <th>航班号</th>
+            <th>座位类型</th>
+            <th>座位号</th>
+            <th>起飞行程</th>
+            <th>到达行程</th>
+            <th>结算总价</th>
+            <th>订单状态</th>
+            <th>操作</th>
+        </tr>
+
+        <tr th:each="inovice: ${invoice_list}" class="fontsize">
+            <td th:text="${inovice.select_date}"></td>
+            <td th:text="${inovice.start_pos}"></td>
+            <td th:text="${inovice.airp_id}"></td>
+            <td th:text="${inovice.seat_level}"></td>
+            <td th:text="${inovice.seat_id}"></td>
+            <td th:text="${inovice.start_pos}"></td>
+            <td th:text="${inovice.dest_pos}"></td>
+            <td th:text="${inovice.payment_real}"></td>
+            <td th:text="${inovice.state}"></td>
+            <td>
+                <p>
+                    <input type="button" class="button" value="查看订单"
+                           onclick="javascript:window.location.href='订单详情.html'">
+                </p>
+                <p>
+                    <input type="button" class="button" value="取消订单" id="show8" onclick="quit(1)">
+                </p>
+                <p>
+                    <input type="button" class="button" value="立即支付" id="show9" onclick="pay2()">
+                </p>
+                <p>
+                    <input type="button" class="button" value="   退票   " id="show10" onclick="del(1)"
+                           style="display: none;">
+                </p>
+                <p>
+                    <input type="button" class="button" value="   改签   " id="show11"
+                           onclick="javascript:window.location.href='航班查询.html'" style="display: none;">
+                </p>
+            </td>
+        </tr>
+
+        <!-- <a href="订单详情.html">查看详情</a><br>
+              <a href="#" class="quxiao">取消订单</a><br>
+              <a href="../查询列表.html" >改签</a><br> -->
+
+        <!--<a href="#" class="tuipiao">【申请退票】</a><br>
+              <a href="#" class="qiye09">【申请改签】</a></td>-->
+
+        <tr>
+            <td colspan="8">
+                <div class="pagelist">
+                    <a href="">上一页</a>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="">3</a>
+                    <a href="">下一页</a>
+                    <a href="">尾页</a></div>
+            </td>
+        </tr>
+    </table>
+
+
+</div>
+</div>
+<!-- //container -->
+</div>
+<!--    妹子插件-->
+<script src="./live2dw/lib/L2Dwidget.min.js"></script>
+<script src="./live2dw/lib/L2Dwidget.0.min.js"></script>
+<script>
+    L2Dwidget.init({
+// 谷歌打开这个，后面是本地文件，只能编译器打开
+        "model": {jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json", "scale": 1},
+
+// 本地文件，只能编译器打开
+// 　　   "model": {jsonPath:"https://unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json","scale": 1 }, /*sex妹子*/
+// 			"model": {jsonPath:"./live2dw/live2d-widget-model-koharu/assets/koharu.model.json","scale": 1 }, /*小女孩*/
+//       "model": {jsonPath:"./live2dw/live2d-widget-model-tororo/assets/tororo.model.json","scale": 1 },/*小白猫*/
+//       "model": {jsonPath:"./live2dw/live2d-widget-model-wanko/assets/wanko.model.json","scale": 1 },/*小白猫*/
+        "display": {"position": "right", "width": 200, "height": 400, "hOffset": 0, "vOffset": -20}, /*小狗*/
+        "mobile": {"show": true, "scale": 1},
+        "react": {"opacityDefault": 1, "opacityOnHover": 1}
+    });
+</script>
+<!--    妹子插件end-->
+
+
+</body>
+
+</html>
